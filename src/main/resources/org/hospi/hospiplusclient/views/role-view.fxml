@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.RoleController">
+
+    <HBox prefHeight="50" prefWidth="1200.0" style="-fx-background-color: #2f3136; -fx-padding: 10;">
+        <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 Role management" />
+    </HBox>
+
+    <VBox layoutX="14.0" layoutY="65.0" prefHeight="371.0" prefWidth="543.0" spacing="10">
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Role Management" />
+      <HBox prefHeight="47.0" prefWidth="543.0">
+         <children>
+               <Label prefHeight="24.0" prefWidth="97.0" text="Role Name:" />
+               <TextField fx:id="roleNameField" promptText="Enter role name" />
+         </children>
+      </HBox>
+
+        <HBox prefHeight="64.0" prefWidth="543.0" spacing="10">
+            <Button onAction="#handleAdd" text="Create" />
+            <Button onAction="#handleUpdate" text="Update" />
+            <Button onAction="#handleDelete" text="Delete" />
+        </HBox>
+
+        <TableView fx:id="roleTable" prefHeight="225.0" prefWidth="543.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="roleNameColumn" prefWidth="462.0" text="Role Name" />
+            </columns>
+        </TableView>
+    </VBox>
+
+
+</AnchorPane>

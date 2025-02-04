@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="556.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.ProductController">
+
+    <HBox prefHeight="50" prefWidth="1200.0" style="-fx-background-color: #2f3136; -fx-padding: 10;">
+        <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 Product Form" />
+    </HBox>
+   <VBox layoutX="14.0" layoutY="65.0" prefHeight="542.0" prefWidth="1010.0" spacing="10">
+
+      <children>
+          <HBox alignment="CENTER_LEFT" spacing="10">
+              <Label style="-fx-font-size: 14px;" text="Search Product:" />
+              <TextField fx:id="searchField" prefWidth="300" promptText="Enter product code" />
+          </HBox>
+         <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Products" />
+         <HBox prefHeight="407.0" prefWidth="1010.0">
+            <children>
+            
+                <VBox spacing="10">
+                    <TableView fx:id="productTable" prefHeight="400" prefWidth="500">
+                        <columns>
+                            <TableColumn fx:id="idColumn" text="ID" />
+                            <TableColumn fx:id="codeColumn" text="Code" />
+                            <TableColumn fx:id="muColumn" text="MU" />
+                            <TableColumn fx:id="quantityColumn" text="Quantity" />
+                            <TableColumn fx:id="priceColumn" prefWidth="150" text="Price Per Unit" />
+                        </columns>
+                    </TableView>
+                </VBox>
+               <VBox prefHeight="363.0" prefWidth="396.0" spacing="10" style="-fx-padding: 10; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 5;">
+                  <children>
+            
+                          <GridPane hgap="10" prefHeight="160.0" prefWidth="418.0" vgap="10">
+                           <Label text="Code:" />
+                           <TextField fx:id="codeField" promptText="Enter code" GridPane.columnIndex="1" />
+                           <Label text="MU:"  GridPane.rowIndex="1" />
+                           <TextField fx:id="muField" promptText="Enter mu" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Label text="Quantity:" GridPane.rowIndex="2" />
+                           <TextField fx:id="quantityField" promptText="Enter quantity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Label text="Critical Quantity:" GridPane.rowIndex="3" />
+                           <TextField fx:id="criticalQuantityField" promptText="Enter critical quantity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Label text="Price Per Unit:" GridPane.rowIndex="4" />
+                           <TextField fx:id="priceField" promptText="Enter price per unit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                          <Label text="Select Category:" GridPane.rowIndex="5" />
+                          <ComboBox fx:id="categoryComboBox" promptText="Select Category" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                        </rowConstraints>
+                       </GridPane>
+         
+                       <HBox alignment="CENTER" prefHeight="42.0" prefWidth="418.0" spacing="10">
+                           <Button onAction="#handleAdd" text="Create" />
+                           <Button onAction="#handleUpdate" text="Update" />
+                           <Button onAction="#handleDelete" text="Delete" />
+                           <Button onAction="#handleClear" text="Clear" />
+                       </HBox>
+                  </children>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+         </HBox>
+      </children>
+   </VBox>
+
+</AnchorPane>

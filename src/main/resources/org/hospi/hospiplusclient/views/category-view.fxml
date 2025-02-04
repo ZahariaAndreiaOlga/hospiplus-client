@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.CategoryController">
+   <VBox prefHeight="700.0" prefWidth="1200.0">
+      <children>
+      
+          <HBox prefHeight="50" style="-fx-background-color: #2f3136; -fx-padding: 10;">
+              <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 Category Management" />
+          </HBox>
+      </children>
+   </VBox>
+    <VBox layoutX="14.0" layoutY="65.0" prefHeight="389.0" prefWidth="531.0" spacing="10">
+
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Category Management" />
+      <HBox prefHeight="55.0" prefWidth="531.0">
+         <children>
+               <Label prefHeight="17.0" prefWidth="116.0" text="Category Name:" />
+               <TextField fx:id="catgNameField" promptText="Enter Category name" />
+         </children>
+      </HBox>
+
+        <HBox prefHeight="61.0" prefWidth="531.0" spacing="10">
+            <Button onAction="#handleAdd" text="Add" />
+            <Button onAction="#handleUpdate" text="Update" />
+            <Button onAction="#handleDelete" text="Delete" />
+        </HBox>
+
+        <TableView fx:id="categoryTable" prefHeight="275.0" prefWidth="531.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="catgNameColumn" prefWidth="450.0" text="Category Name" />
+            </columns>
+        </TableView>
+    </VBox>
+
+</AnchorPane>

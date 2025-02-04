@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" stylesheets="@styleAuth.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.LoginController">
+
+    <VBox alignment="CENTER" layoutX="200" layoutY="100" spacing="20">
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo.png" />
+         </image>
+      </ImageView>
+        <Label text="Email:" />
+        <TextField fx:id="emailField" promptText="Enter your email" />
+
+        <Label text="Password:" />
+        <PasswordField fx:id="passwordField" promptText="Enter your password" />
+
+        <!-- Error label to display error messages -->
+        <Label fx:id="errorLabel" style="-fx-text-fill: red;" />
+
+        <Button onAction="#handleLogin" text="Login" />
+        <Hyperlink onAction="#switchToRegister" text="Don't have an account? Register" />
+    </VBox>
+
+</AnchorPane>

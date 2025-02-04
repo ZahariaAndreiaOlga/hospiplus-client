@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.ProductDashboardController">
+    <children>
+        <!-- Title Bar -->
+        <HBox layoutY="0" prefHeight="50" style="-fx-background-color: #2f3136;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-text-fill: white; -fx-padding: 10;" text="📊 Inventory Overview" />
+            <Button mnemonicParsing="false" onAction="#downloadCsv" prefHeight="38.0" prefWidth="125.0" text="Download CSV">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Button>
+            </children>
+        </HBox>
+
+        <!-- Product List Section -->
+        <VBox layoutY="10" prefHeight="290.0" prefWidth="752.0" spacing="10" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="438.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Product List" />
+                <TableView fx:id="productTable" prefHeight="262.0" prefWidth="1276.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="150" text="ID" />
+                        <TableColumn fx:id="codeColumn" prefWidth="150" text="Code" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="150" text="Quantity" />
+                        <TableColumn fx:id="criticalQuantityColumn" prefWidth="150" text="Critical Quantity" />
+                        <TableColumn fx:id="pricePerUnitColumn" prefWidth="150" text="Price Per Unit" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+
+        <!-- Stock Histogram Section -->
+        <VBox layoutY="10" prefHeight="298.0" prefWidth="765.0" spacing="10" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="438.0">
+            <children>
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Stock Histogram" />
+                <BarChart fx:id="stockHistogram" prefHeight="263.0" prefWidth="783.0" title="Stock History by Month">
+                    <xAxis>
+                        <CategoryAxis fx:id="monthAxis" label="Month" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="quantityAxis" label="Quantity" />
+                    </yAxis>
+                </BarChart>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

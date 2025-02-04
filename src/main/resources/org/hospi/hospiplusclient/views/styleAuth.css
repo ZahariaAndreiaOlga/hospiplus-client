@@ -1,0 +1,35 @@
+.button {
+    -fx-background-color: #2f3136; /* Default background */
+    -fx-text-fill: white;         /* Default text color */
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0 10 0 10;      /* Add padding: top, right, bottom, left */
+    -fx-pref-width: 150px;       /* Set a fixed width */
+    -fx-pref-height: 40px;       /* Set a fixed height */
+    -fx-alignment: center;      /* Align text to the center */
+    -fx-cursor: hand;            /* Makes the button behave like a website */
+}
+
+.button:hover {
+    -fx-background-color: #40444b; /* Background color on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #5865f2; /* Background color when clicked */
+}
+
+/* Input Fields */
+.text-field, .password-field {
+    -fx-background-color: #ecf0f1; /* Light grey */
+    -fx-border-color: #bdc3c7; /* Subtle border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db; /* Blue border when focused */
+    -fx-background-color: #ffffff; /* White background when focused */
+}

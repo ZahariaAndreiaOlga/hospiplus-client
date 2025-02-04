@@ -1,0 +1,114 @@
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #f5f5f5; /* Light grey for a professional look */
+    -fx-text-fill: #333; /* Dark grey for text */
+}
+
+.button {
+    -fx-background-color: #2f3136; /* Default background */
+    -fx-text-fill: white;         /* Default text color */
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0 10 0 10;      /* Add padding: top, right, bottom, left */
+    -fx-pref-width: 150px;       /* Set a fixed width */
+    -fx-pref-height: 40px;       /* Set a fixed height */
+    -fx-alignment: baseline-left; /* Align text to the left */
+    -fx-cursor: hand;            /* Makes the button behave like a website */
+}
+
+.button:hover {
+    -fx-background-color: #40444b; /* Background color on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #5865f2; /* Background color when clicked */
+}
+
+
+/* Content Area Styling */
+.content {
+    -fx-padding: 20px;
+    -fx-background-color: #ffffff; /* White background for clarity */
+}
+
+/* Input Fields */
+.text-field, .password-field {
+    -fx-background-color: #ecf0f1; /* Light grey */
+    -fx-border-color: #bdc3c7; /* Subtle border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db; /* Blue border when focused */
+    -fx-background-color: #ffffff; /* White background when focused */
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.label.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.label.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #7f8c8d; /* Lighter grey for subtitles */
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #ecf0f1; /* Light grey background */
+    -fx-border-color: #bdc3c7; /* Subtle border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498db; /* Blue border when focused */
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #bdc3c7; /* Grey for arrow button */
+    -fx-border-radius: 5px;
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: #95a5a6; /* Slightly darker grey on hover */
+}
+
+.combo-box .list-view {
+    -fx-background-color: #ffffff; /* White dropdown background */
+    -fx-control-inner-background: #ffffff;
+    -fx-border-color: #bdc3c7;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5px 10px;
+    -fx-text-fill: #333;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #ecf0f1; /* Light grey hover effect */
+}
+
+
+/* Tables */
+.table-view {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #bdc3c7; /* Light grey border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}

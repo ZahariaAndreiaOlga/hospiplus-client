@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.WelcomeController">
+   <children>
+      <HBox prefHeight="50" style="-fx-background-color: #2f3136; -fx-padding: 10;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 Welcome to Hospiplus" />
+         </children>
+      </HBox>
+
+      <VBox layoutX="111.0" layoutY="136.0" prefHeight="429.0" prefWidth="422.0" spacing="20" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="684.0" AnchorPane.topAnchor="136.0">
+      </VBox>
+      <ImageView fitHeight="422.0" fitWidth="750.0" layoutX="390.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

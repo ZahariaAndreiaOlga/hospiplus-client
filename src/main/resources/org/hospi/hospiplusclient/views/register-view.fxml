@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="org.hospi.hospiplusclient.controllers.RegisterController"
+            prefHeight="700.0" prefWidth="600.0" stylesheets="@styleAuth.css">
+
+    <VBox spacing="20" alignment="CENTER" layoutX="200" layoutY="100">
+        <Label text="Registration" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <TextField fx:id="userNameField" promptText="Username" />
+        <TextField fx:id="surnameField" promptText="Surname" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+
+        <!-- Error label to display error messages -->
+        <Label fx:id="errorLabel" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+
+        <Button text="Register" onAction="#handleRegistration" />
+        <Hyperlink text="Already have an account? Log in" onAction="#switchToLogin"/>
+    </VBox>
+
+</AnchorPane>

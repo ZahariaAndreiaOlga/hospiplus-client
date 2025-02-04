@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.MyOrderController">
+
+        <HBox prefHeight="50" prefWidth="1200.0" style="-fx-background-color: #2f3136; -fx-padding: 10;">
+            <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 All Orders" />
+        </HBox>
+
+        <TableView fx:id="ordersTable" layoutX="20.0" layoutY="61.0" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" prefWidth="168.0" text="Order ID" />
+                <TableColumn fx:id="orderDateColumn" prefWidth="202.0" text="Ordered At" />
+                <TableColumn fx:id="orderTotalPriceColumn" prefWidth="229.0" text="Total Price" />
+            </columns>
+        </TableView>
+
+        <TableView fx:id="orderContentTable" layoutX="20.0" layoutY="280.0" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="productNameColumn" prefWidth="119.0" text="Product Name" />
+                <TableColumn fx:id="productQuantityColumn" prefWidth="157.0" text="Quantity" />
+                <TableColumn fx:id="productPriceColumn" prefWidth="156.0" text="Price per Unit" />
+                <TableColumn fx:id="productTotalPriceColumn" prefWidth="167.0" text="Total Price" />
+            </columns>
+        </TableView>
+
+</AnchorPane>

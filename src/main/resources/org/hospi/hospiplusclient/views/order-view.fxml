@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hospi.hospiplusclient.controllers.OrderController">
+   <VBox prefHeight="700.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0">
+      <children>
+          <HBox prefHeight="50" style="-fx-background-color: #2f3136; -fx-padding: 10;">
+                  <Label fx:id="titleLabel" style="-fx-font-size: 20px; -fx-text-fill: white;" text="📊 Make a Order" />
+          </HBox>
+         <HBox prefHeight="465.0" prefWidth="1180.0">
+            <children>
+            
+            
+                <!-- Left: Product Table -->
+                <TableView fx:id="productTable" prefHeight="436.0" prefWidth="302.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="codeColumn" prefWidth="100" text="Code" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="50" text="Qty" />
+                        <TableColumn fx:id="priceColumn" prefWidth="100" text="Price" />
+                    </columns>
+                </TableView>
+            
+                <!-- Center: Arrow Buttons -->
+                <VBox fx:id="arrowButtons" alignment="CENTER" prefHeight="465.0" prefWidth="344.0" spacing="10">
+                    <Button fx:id="addToBasketButton" onAction="#handleAddToBasket" text="→ Add to Basket" />
+                    <Button fx:id="removeFromBasketButton" onAction="#handleRemoveFromBasket" text="← Remove from Basket" />
+                </VBox>
+               <VBox prefHeight="424.0" prefWidth="300.0">
+                  <children>
+                  
+                      <!-- Right: Basket Table -->
+                      <TableView fx:id="basketTable" prefHeight="400" prefWidth="300">
+                          <columns>
+                              <TableColumn fx:id="basketIdColumn" prefWidth="50" text="ID" />
+                              <TableColumn fx:id="basketCodeColumn" prefWidth="100" text="Code" />
+                              <TableColumn fx:id="basketQuantityColumn" prefWidth="50" text="Qty" />
+                              <TableColumn fx:id="basketPriceColumn" prefWidth="100" text="Price" />
+                              <TableColumn fx:id="basketTotalColumn" prefWidth="100" text="Total" />
+                          </columns>
+                      </TableView>
+                  
+                      <!-- Submit Order Button -->
+                      <Button fx:id="submitOrderButton" prefHeight="30.0" prefWidth="88.0" text="Submit Order" onAction="#handleSubmitOrder" />
+                  </children>
+               </VBox>
+            </children>
+            <VBox.margin>
+               <Insets left="20.0" top="20.0" />
+            </VBox.margin>
+         </HBox>
+      </children>
+   </VBox>
+</AnchorPane>
