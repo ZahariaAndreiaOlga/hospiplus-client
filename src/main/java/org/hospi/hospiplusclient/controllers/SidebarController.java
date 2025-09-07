@@ -1,5 +1,6 @@
 package org.hospi.hospiplusclient.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -32,6 +33,16 @@ public class SidebarController {
     private Button allOrdersButton;
     @FXML
     private Button orderButton;
+    @FXML
+    public Button wardButton;
+    @FXML
+    public Button wardProductButton;
+    @FXML
+    public Button wardTransferButton;
+    @FXML
+    public Button pharmacyWardTransferButton;
+    @FXML
+    public Button wardTransferHistoryButton;
     @FXML
     private Button logoutButton;
 
@@ -96,6 +107,31 @@ public class SidebarController {
     }
 
     @FXML
+    private void handleWard() {
+        loadContent("views/ward-view.fxml");
+    }
+
+    @FXML
+    private void handleProductWard() {
+        loadContent("views/productward-view.fxml");
+    }
+
+    @FXML
+    private void handleWardTransfer() {
+        loadContent("views/wardtransfer-view.fxml");
+    }
+
+    @FXML
+    private void handlePharmacyWardTransfer() {
+        loadContent("views/pharmacywardtransfer-view.fxml");
+    }
+
+    @FXML
+    private void handleProductWardHistory() {
+        loadContent("views/productwardhistory-view.fxml");
+    }
+
+    @FXML
     private void handleLogout() {
         try{
             TokenStorage.clearJwtToken();
@@ -137,6 +173,11 @@ public class SidebarController {
                 userButton.setManaged(false);
             }
 
+            if (wardButton != null) {
+                wardButton.setVisible(false);
+                wardButton.setManaged(false);
+            }
+
         }else if (role.equals("user")) {
             // Show user-specific buttons or content
             if (categoryButton != null) {
@@ -170,6 +211,26 @@ public class SidebarController {
             if (orderButton != null) {
                 orderButton.setVisible(false);
                 orderButton.setManaged(false);
+            }
+
+            if (wardButton != null) {
+                wardButton.setVisible(false);
+                wardButton.setManaged(false);
+            }
+
+            if (wardProductButton != null) {
+                wardProductButton.setVisible(false);
+                wardProductButton.setManaged(false);
+            }
+
+            if (wardTransferButton != null) {
+                wardTransferButton.setVisible(false);
+                wardTransferButton.setManaged(false);
+            }
+
+            if (pharmacyWardTransferButton != null) {
+                pharmacyWardTransferButton.setVisible(false);
+                pharmacyWardTransferButton.setManaged(false);
             }
         }
     }

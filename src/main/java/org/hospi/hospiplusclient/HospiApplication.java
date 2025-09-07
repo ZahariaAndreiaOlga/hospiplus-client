@@ -64,12 +64,12 @@ public class HospiApplication extends Application {
         SidebarController sidebarController = new SidebarController();
 
         Parent root = sidebarLoader.load();
-        Scene mainScene = new Scene(root, 1400, 700);
+        Scene mainScene = new Scene(root, 1400, 800);
 
         primaryStage.setMinWidth(1400);
-        primaryStage.setMinHeight(700);
+        primaryStage.setMinHeight(800);
         primaryStage.setMaxWidth(1400);
-        primaryStage.setMaxHeight(700);
+        primaryStage.setMaxHeight(800);
 
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Main Interface");

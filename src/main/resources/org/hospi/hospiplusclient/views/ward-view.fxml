@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.hospi.hospiplusclient.controllers.WardController"
+            prefWidth="800" prefHeight="600">
+
+    <!-- Search -->
+    <TextField fx:id="searchField" layoutX="20" layoutY="20" prefWidth="250" promptText="Search by Ward Name"/>
+
+    <!-- Ward Table -->
+    <TableView fx:id="wardTable" layoutX="20" layoutY="60" prefWidth="760" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="wardNameColumn" text="Ward Name" prefWidth="200"/>
+            <TableColumn fx:id="capacityColumn" text="Capacity" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Form Inputs -->
+    <Label text="Ward Name:" layoutX="20" layoutY="380"/>
+    <TextField fx:id="wardNameField" layoutX="150" layoutY="375" prefWidth="200"/>
+
+    <Label text="Capacity:" layoutX="20" layoutY="420"/>
+    <TextField fx:id="capacityField" layoutX="150" layoutY="415" prefWidth="200"/>
+
+    <!-- Buttons -->
+    <Button text="Add" layoutX="400" layoutY="375" onAction="#handleAdd"/>
+    <Button text="Update" layoutX="480" layoutY="375" onAction="#handleUpdate"/>
+    <Button text="Delete" layoutX="560" layoutY="375" onAction="#handleDelete"/>
+    <Button text="Clear" layoutX="640" layoutY="375" onAction="#handleClear"/>
+
+</AnchorPane>

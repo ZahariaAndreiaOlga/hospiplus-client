@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.hospi.hospiplusclient.controllers.WardTransferController" prefWidth="800" prefHeight="600">
+
+    <TextField fx:id="searchField" layoutX="20" layoutY="20" promptText="Search by product code" prefWidth="200"/>
+
+    <TableView fx:id="transferTable" layoutX="20" layoutY="60" prefWidth="760" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="giverColumn" text="Giver Ward"/>
+            <TableColumn fx:id="receiverColumn" text="Receiver Ward"/>
+            <TableColumn fx:id="productColumn" text="Product"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity"/>
+            <TableColumn fx:id="typeColumn" text="Transfer Type"/>
+        </columns>
+    </TableView>
+
+    <Label text="Giver Ward:" layoutX="20" layoutY="380"/>
+    <ComboBox fx:id="giverComboBox" layoutX="150" layoutY="375" prefWidth="200"/>
+
+    <Label text="Receiver Ward:" layoutX="20" layoutY="420"/>
+    <ComboBox fx:id="receiverComboBox" layoutX="150" layoutY="415" prefWidth="200"/>
+
+    <Label text="Product:" layoutX="20" layoutY="460"/>
+    <ComboBox fx:id="productComboBox" layoutX="150" layoutY="455" prefWidth="200"/>
+
+    <Label text="Quantity:" layoutX="20" layoutY="500"/>
+    <TextField fx:id="quantityField" layoutX="150" layoutY="495" prefWidth="200"/>
+
+    <Label text="Transfer Type:" layoutX="20" layoutY="540"/>
+    <ComboBox fx:id="typeComboBox" layoutX="150" layoutY="535" prefWidth="200"/>
+
+    <Button text="Add" layoutX="400" layoutY="380" onAction="#handleAdd"/>
+    <Button text="Update" layoutX="500" layoutY="380" onAction="#handleUpdate"/>
+    <Button text="Delete" layoutX="600" layoutY="380" onAction="#handleDelete"/>
+    <Button text="Clear" layoutX="700" layoutY="380" onAction="#handleClear"/>
+</AnchorPane>

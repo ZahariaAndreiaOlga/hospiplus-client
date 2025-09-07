@@ -22,6 +22,11 @@
         <Button fx:id="userButton" text="User"  styleClass="button" onAction="#handleUser"/>
         <Button fx:id="allOrdersButton" text="AllOrders"  styleClass="button" onAction="#handleAllOrders"/>
         <Button fx:id="orderButton" text="Make a Order"  styleClass="button" onAction="#handleOrder"/>
+        <Button fx:id="wardButton" text="Ward"  styleClass="button" onAction="#handleWard"/>
+        <Button fx:id="wardProductButton" text="Product Ward"  styleClass="button" onAction="#handleProductWard"/>
+        <Button fx:id="wardTransferButton" text="Ward Transfer"  styleClass="button" onAction="#handleWardTransfer"/>
+        <Button fx:id="pharmacyWardTransferButton" text="Pharmacy Ward Transfer"  styleClass="button" onAction="#handlePharmacyWardTransfer"/>
+        <!--<Button fx:id="wardTransferHistoryButton" text="Ward Pharmacy history"  styleClass="button" onAction="#handleProductWardHistory"/>-->
         <Button fx:id="logoutButton" text="Logout"  styleClass="button" onAction="#handleLogout"/>
     </VBox>
 </left>

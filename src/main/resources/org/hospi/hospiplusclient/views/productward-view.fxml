@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.hospi.hospiplusclient.controllers.ProductWardController"
+            prefWidth="1000" prefHeight="600">
+
+    <children>
+        <!-- Ward selector -->
+        <Label text="Select Ward:" layoutX="20" layoutY="20"/>
+        <ComboBox fx:id="wardComboBox" layoutX="120" layoutY="16" prefWidth="300"/>
+
+        <!-- Left table: products in selected ward -->
+        <TableView fx:id="productTable" layoutX="20" layoutY="60" prefWidth="460" prefHeight="520">
+            <columns>
+                <TableColumn fx:id="codeColumn" text="Code" prefWidth="150"/>
+                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/>
+                <TableColumn fx:id="criticalQuantityColumn" text="Critical Qty" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <!-- Right table: product details/history -->
+        <TableView fx:id="productHistoryTable" layoutX="500" layoutY="60" prefWidth="460" prefHeight="520">
+            <columns>
+                <TableColumn fx:id="historyQuantityColumn" text="Quantity" prefWidth="100"/>
+                <TableColumn fx:id="historyDateColumn" text="Date" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

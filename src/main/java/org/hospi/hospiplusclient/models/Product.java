@@ -57,4 +57,9 @@ public class Product {
 
     public Set<ProductHistory> getProductRecords() { return productRecords; }
     public void setProductRecords(Set<ProductHistory> productRecords) { this.productRecords = productRecords; }
+
+    @Override
+    public String toString() {
+        return code.get();
+    }
 }

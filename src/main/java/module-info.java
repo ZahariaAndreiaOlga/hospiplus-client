@@ -16,6 +16,7 @@ module org.hospi.hospiplusclient {
     requires java.desktop;
     requires jjwt.api;
     requires org.json;
+    //requires org.hospi.hospiplusclient;
 
     opens org.hospi.hospiplusclient to javafx.fxml;
     exports org.hospi.hospiplusclient;
